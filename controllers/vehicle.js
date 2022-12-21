@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const { model } = require('mongoose')
 const Vehicle = require('../models/vehicle')
 
 router.get('/', async (req, res) => {
@@ -10,3 +11,5 @@ router.post('/', async (req, res) => {
     const vehicle = await new Vehicle(req.body).save()
     res.json(vehicle)
 })
+
+module.exports = router
