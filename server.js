@@ -13,7 +13,7 @@ app.use(express.json())
 app.use('/vehicle', vehicleRoutes)
 
 app.get('/', (req, res) => {
-  res.render()
+  res.render('home')
 })
 
 //database connection
