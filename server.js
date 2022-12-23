@@ -6,12 +6,14 @@ require('dotenv').config()
 const app = express()
 
 //middleware
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
 app.use(express.json())
 
 app.use('/vehicle', vehicleRoutes)
 
 app.get('/', (req, res) => {
-  res.send('Hello, world!')
+  res.render()
 })
 
 //database connection
